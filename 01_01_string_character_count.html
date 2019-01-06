@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>JS Exercise—Get histograms of a string</title>
+</head>
+<html>
+<body>
+<p>Get the count of the letter p in the following sentence:</p>
+<p id="demo">Happy puppy</p>
+
+<button onclick="myFunction()">Get Count</button>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+
+<script>
+//vanilla js practice
+var getStr = document.querySelector('#demo').firstChild.nodeValue;
+
+let myFunction = function() {
+	const object = {};
+	let i;
+	for (i = 0; i < getStr.length; i++) {
+      let char = getStr[i];
+		// whitespace can throw error when incrementing to object, so... 
+      // if string value is false, set it (whitespace) to 0
+		if (!object[char]) {
+			object[char] = 0;
+		}
+		// incrementing strings into an object. 
+      // The string values become the keys. 
+		object[char]++;
+	}
+	console.log(object);
+   document.querySelector('#demo2').innerHTML = object.p;
+	document.querySelector('#demo3').innerHTML = "all letter counts logged in console"
+} 	
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

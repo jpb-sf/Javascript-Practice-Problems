@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>JS Exercise—Create new array with values that pass a test</title>
+</head>
+<html>
+<body>
+<p>Filter array into a new array for items that pass a test</p>
+
+
+<script>
+// vanilla js practice
+let array = [10, 20, 21, 23];
+
+// set up empty array
+// filter method set on a passed in value invokes a callback function
+// if statement creates a test. 
+// push items that pass test to new array
+
+const myFunction = function(value) {
+   let newArray = [];
+   let over21 = value.filter(filterF);
+
+   function filterF(item,index) {
+      if ( item >= 21) {
+         newArray.push(item);
+      }
+   }
+   console.log(newArray);
+};
+
+myFunction(array);
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

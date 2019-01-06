@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Set Time (custom format)</title>
+</head>
+<html>
+
+<style>
+body {
+	margin-left: 1rem;
+}
+.demo {
+	font-family: sans-serif;
+	line-height: 1.4rem;
+}
+.italic {
+	font-style: italic;
+	color:#888
+}
+</style>
+
+<body>
+<p style="color:#656">Vanilla JavaScript Practice Problem <br> Set the time to look like this:
+<br>
+<br>
+Today is: Tuesday.<br>
+Time: 8 PM : 25 : 58 </p>
+
+<button onclick="getDT()">Get Date &amp; Time</button>
+<button onclick="runClock()">Run Clock</button>
+
+<p class="demo"></p>
+
+<script>
+
+// vanilla javascript problem: creating custom display of the time
+// run all needed 'get' methods from the date object
+
+/* adjust 24 hour clock to dual 12 hour time with an if statememt that subtracts 12 
+from the hour value if the hour value is over 12 */
+
+// set an if statement based on hour value to assign AM of PM to a variable
+// concat a 0 to the minutes and seconds value if the values are less than 10
+// assign proper day names to the day value using a switch statement
+// create a string in the document concatenated with javascript values
+
+/* create function calling the getDT function once every second using
+the window object setInterval */
+
+const getDT = function() {
+	
+    const d = new Date();
+    let day = d.getDay();
+    let amPm = "";
+    let h = d.getHours();
+    let m = d.getMinutes();
+    let s = d.getSeconds();
+
+    function adjHour(value) {
+    	if (value > 12) {
+    		value = value - 12;
+    		return value;
+    	}
+    }
+    let newHour = adjHour(h);
+    
+	function adjMer() {
+    	if (h < 12)   {
+    	amPm = "AM";
+    	} if( 12 <= h) {
+    	amPM = "PM";
+    	}
+    	return amPM
+    }
+    
+    let getAmPm = adjMer();
+
+    function adjZeros(value) {
+    	if(value < 10) {
+    		value = "0" + value;
+    	}
+    	return value
+    }   
+
+    let getMin = adjZeros(m);
+    let getSec = adjZeros(s);
+
+	switch (day)  {
+    	case 0: day = "Sunday"; break;
+    	case 1: day = "Monday"; break;
+    	case 2: day = "Tuesday"; break;
+    	case 3: day = "Wednesday"; break;
+    	case 4: day = "Thursday"; break;
+    	case 5: day = "Friday"; break;
+    	case 6: day = "Saturday";break;
+    	default: day = "a lovely day"; break;
+    }
+    document.querySelector('.demo').innerHTML = '<span class="italic">' + 'Today is: ' + '</span>'  + day + '.' +'<br>' + '<span class="italic">' + 'Time: ' + '</span>'+ newHour + ' ' + getAmPm + ' : ' + getMin +  ' : ' + getSec; 
+}
+
+let runClock = function() {
+	let run = window.setInterval(getDT, 1000);
+	return run;
+
+};
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

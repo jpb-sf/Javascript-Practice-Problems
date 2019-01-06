@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+</head>
+<html>
+<body>
+
+<p>Grab and return initals of name:</p>
+<p id="demo">John F Kennedy</p>
+
+<button onclick="myFunction()">Get initials</button>
+<button onclick="myFunction2()">Get initials 2</button>
+<button onclick="myFunction3()">Get initials 3</button>
+
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+
+// vanilla JS practice | Converting a name into its initials
+
+// attempt 1 
+// get name from document
+// global search for a single letter followed by a word boudary
+// join the substring with empty value
+
+let myFunction = function(){
+    let getName = document.querySelector('#demo').firstChild.nodeValue;
+    let match = getName.match(/\b\w/g);
+    let join = match.join('');
+    document.querySelector('#demo2').innerHTML = join;
+};
+
+// attempt2 
+// split string into array of substrings using whitespace as indicator of where to separate
+// map functionn to each substring
+// return the value of first index of each substring
+// join the substring with empty value
+
+let myFunction2 = function(){
+    let getName = document.querySelector('#demo').firstChild.nodeValue;
+    let substr = getName.split(" ");
+    let initials = substr.map(function(item) {
+	return item[0];
+    })
+    let join = initials.join('');
+    document.querySelector('#demo3').innerHTML = join;
+};
+
+// attempt3
+// set a variable to not true to be used as condition 
+// loop through substring of getName (each letter will be its own substring)
+// if variable is not true (to start it isnt)
+// set variable value to the addition of current substring value of getName
+// set variable to true
+// if variable substring value is a space, set variable back to false. 
+// original if-statement repeats
+
+let myFunction3 = function() {
+	let getName = document.querySelector('#demo').innerHTML;
+	let initials = "";
+	let isSpace = false;
+	let i;
+	for (i = 0; i < getName.length; i++) {
+		if(!isSpace) {
+		    initials += getName[i];
+		    isSpace = true;
+		}
+		if(getName[i]===" ") {
+			isSpace = false;
+		}
+	}
+	console.log(initials);
+	document.querySelector('#demo4').innerHTML = "value is logged in console."
+}
+			
+</script>
+
+</body>
+</html>
