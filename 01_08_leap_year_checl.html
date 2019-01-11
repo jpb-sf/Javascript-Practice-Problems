@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Leap Year Verify</title>
+</head>
+<body>
+<h1>Leap Year Checker</h1>
+<h4>Insert year here:</h4>
+<input maxlength="4" id="year" pattern="[0-9]">
+<br>
+<br>
+<button class="btn" onclick="checker()">Check</button>
+<p class="demo"></p>
+
+</body>
+<script>
+
+//javascript problem (solved on my own)
+/* create a program that takes a given year and confirms
+whether it is a leap year or not */
+
+// grabs value of input
+// verifes if value is a mumber
+// if not a number, returns message
+// coverts value to string
+/* adds appropriate amount of zeros in front of value,
+so value always has 4 digits. */ 
+// converts number to string, remove first two characters
+// converts 2nd two characters back to number
+// passes them to function.
+/* if argument passes/fails a test (modulus of 4 equals 0)
+returns appropriate concatenated string answer*/
+
+let checker = function() {
+	let v = document.querySelector("#year").value;
+	let numCheck = isNaN(v);
+	let str;
+	let parse;
+	if (numCheck == true) {
+		return document.querySelector('.demo').innerHTML = "Please enter a number.";
+	} 
+	if (v < 1000 && v > 99)  {
+		str = "0" + v;
+	} else if (v < 100 && v > 9) {
+		str = "00" + v;
+	} else if (v < 10 && v > 0) {
+		str = "000" + v;
+	} else {
+		str = v.toString();
+	}
+	parse = str.substr(2);
+	num = + parse;
+	let invoke = yearCalc(num);
+	
+	function yearCalc(n) {
+		let x = n % 4;
+
+		if (x === 0) {
+			x = "a leap year.";
+		} else {
+			x = "not a leap year."
+		}
+		document.querySelector('.demo').innerHTML = "This year is " + x;
+		}
+		console.log(num)
+	}
+</script>
+
+
+
+
+
+
+</html>

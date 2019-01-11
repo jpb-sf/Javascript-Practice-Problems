@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Area of a Triangle</title>
+</head>
+<body>
+<script>
+
+// Vanilla Javascript Problem (solved on my own)
+// Get area of a triangle with the lengths of 5, 6, 7
+
+// Heron's formula:
+// semiperimter is s = (a + b + c) / 2
+// A = √s(s - a)(s - b)(s - c)
+
+let triLengths = [5, 6, 7];
+
+let areaCalc = function(v) {
+
+	let s = (v[0] + v[1] + v[2]) /2;
+	let a1 = (s - v[0]) * (s - v[1]) * (s - v[2]);
+	let a2 = a1 * s;
+	let a3 = Math.sqrt(a2);
+	return a3;
+}
+
+let getArea = areaCalc(triLengths);
+
+console.log(getArea)
+
+
+</script>	
+</body>
+</html>

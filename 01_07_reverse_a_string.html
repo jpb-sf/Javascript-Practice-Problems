@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animate String</title>
+</head>
+<body>
+
+<p class="demo">A Tale of Two Cities </p>
+<p class="demo2"></p>
+<button class="btn" type="click">Click </button>
+
+</body>
+<script>
+
+// Vanilla Javascript Problem: (solved with assistance)
+// In periodic increments, reverse the order of a string letter by letter
+// The steps taken:
+// creates a function call with desired element selector as the passed argument
+// gets the first child node of element which is the text node
+// delares a variable 'text;' with the value being the value of text node (textNode.data)
+// runs window object method 'setInteval' that calls a new name function
+// the name-function reassigns the vale of 'text' to itsef[last index] + substring of text(text minus last char)
+// reverses assign textNode.data as a variable with the value being the new value of 'text'
+// second parameter of setInterval calls the function repeatedly.
+/* 'text' variabe will store the new value of textNode.data which is neccessary so
+when function returns to the variable, it is storing the updated value, not the original */
+
+
+let getElement = shiftString('demo');
+
+function shiftString(argument) {
+	// wowza figured out how to pass classes, ids part 2
+	const element = document.querySelector("." + argument);
+	const textNode = element.childNodes[0];
+	let text = textNode.data;
+
+	window.setInterval(function() {
+		text = text[text.length - 1] + text.substring(0, text.length - 1);
+		textNode.data = text;
+		
+	}, 100);
+}
+
+</script>	
+</html>
