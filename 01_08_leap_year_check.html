@@ -36,7 +36,6 @@ let checker = function() {
 	let v = document.querySelector("#year").value;
 	let numCheck = isNaN(v);
 	let str;
-	let parse;
 	
 	if (numCheck == true) {
 		return document.querySelector('.demo').innerHTML = "Please enter a number.";
@@ -50,21 +49,16 @@ let checker = function() {
 	} else {
 		str = v.toString();
 	}
-	parse = str.substr(2);
-	num = + parse;
-	let invoke = yearCalc(num);
-	
-	function yearCalc(n) {
-		let x = n % 4;
 
-		if (x === 0) {
-			x = "a leap year.";
-		} else {
-			x = "not a leap year."
-		}
-		document.querySelector('.demo').innerHTML = "This year is " + x;
-		}
-		console.log(num)
+	if (str.substr(2) == 00 && !(str % 400 == 0)) {
+		str = "not a leap year";
+	}
+	if (str % 4 == 0) {
+		str = "a leap year"
+	} else {
+		str = "not a leap year"
+	}
+	document.querySelector('.demo').innerHTML = "This year is " + str;
 	}
 </script>
 
