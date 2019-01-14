@@ -26,11 +26,16 @@ whether it is a leap year or not */
 // coverts value to string
 /* adds appropriate amount of zeros in front of value,
 so value always has 4 digits. */ 
-// converts number to string, remove first two characters
-// converts 2nd two characters back to number
-// passes them to function.
-/* if argument passes/fails a test (modulus of 4 equals 0)
-returns appropriate concatenated string answer*/
+// converts number to string
+
+/* if statement: if last two characters are zeros and if
+using a modulus of 400 equates to 0 is NOT true,
+set variable to not a leap year. **this counts for 
+the 1 out of 4 'century year' leap year rule*/
+
+/* if statememt: if the value returns 0 when modulus of 4,
+reassign variable to 'is to leap year.'' **All leap years are divisible by 4,
+otherwise reassign str value as 'not a leap year' */
 
 let checker = function() {
 	let v = document.querySelector("#year").value;
