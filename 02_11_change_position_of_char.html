@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<titleharset="UTF-8">
+<title>Change position of characters</title>
+</head>
+<html>
+<body>
+
+<input type="text" class="input">
+<button onclick="test()">Try</button>
+
+</body>
+<script>
+// Vanilla Javascript exercise:
+/* Take a given string and swap the first character with the last character */
+function test (){
+const input = document.querySelector('.input').value;
+if (input.length < 2) {
+	return console.log('please enter more than one character')
+}
+const lastChar = input.charAt(input.length - 1);
+const firstChar = input[0];
+let newString = lastChar + input.substring(1, input.length -1) + firstChar;
+console.log(newString)
+}
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

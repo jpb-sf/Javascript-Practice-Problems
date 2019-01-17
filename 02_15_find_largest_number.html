@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<titleharset="UTF-8">
+<title>Check if string passes a test</title>
+</head>
+<html>
+<body>
+<p>Enter three numbers, and find the largest value. </p>
+<span>#1: </span><input type="text" class="input"><br>
+<span>#2: </span><input type="text" class="input2"><br>
+<span>#3: </span><input type="text" class="input3">
+<br>
+<br>
+<button onclick="test()">Find Largest</button>
+
+</body>
+<script>
+// Vanilla Javascript exercise:
+/* Find the largest value of three given numbers(integers) */
+function test (){
+const input = document.querySelector('.input').value;
+const input2 = document.querySelector('.input2').value;
+const input3 = document.querySelector('.input3').value;
+if (input > input2 && input > input3){
+	console.log(input + ' is the largest number.')
+} else if (input2 > input && input2 > input3) {
+	console.log(input2 + ' is the largest number.')
+} else if (input3 > input && input3 > input2) {
+	console.log(input3 + ' is the largest number.')
+}
+}
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

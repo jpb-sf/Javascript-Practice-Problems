@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Grab any file extension</title>
+</head>
+<html>
+<body>
+
+<p class="demo">Type in one or more file names with extenstions:</p>
+<p>(Console will log extentions)</p>
+
+<input type="text" class="input">
+<button onclick="test()">Try</button>
+
+</body>
+<script>
+// Vanilla Javascript exercise
+// Create program that will grab all user given file extensions
+function test (){
+let input = document.querySelector('.input').value;
+let fileExt = input.match(/[.]\w+/g);
+
+console.log(fileExt)
+}
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

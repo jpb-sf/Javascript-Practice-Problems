@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>User sets the variable</title>
+</head>
+<html>
+<body>
+
+<p class="demo">hello</p>
+<input type="text" class="input">
+<button onclick="test()">Try</button>
+
+</body>
+<script>
+// Vanilla Javascript exercise:
+// Write a program that can create a user named js variable
+function test (){
+let input = document.querySelector('.input').value;
+let userVar = {};
+
+this[userVar] = input;
+console.log(this[userVar])
+}
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

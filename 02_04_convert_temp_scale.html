@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Convert Fahrenheit to/from Celsius</title>
+</head>
+<html>
+
+<style>
+	.btn1 {
+		font-size: 1rem;
+		background-color: blue;
+		color:white;
+		padding: 1rem;
+		border:none;
+		border-radius: .3rem;
+	}
+	.btn2 {
+		font-size: 1rem;
+		background-color: green;
+		color:white;
+		padding: 1rem;
+		border:none;
+		border-radius: .3rem;
+	}
+</style>
+
+<body>
+
+<h2>Celsius Fahrenheit Converter</h2>
+<span>Enter known Temperature (F&#176 or C&#176) :
+<input type="number" maxlength="5" class="input">
+<br>
+<br>
+<button class="btn1" class="btn1">Convert F&#176 to C&#176</button>
+<button type="click" class="btn2">Convert C&#176 to F&#176</button>
+
+<p class="demo"></p>
+
+<script>
+// Vanilla Javascript exercise:
+// Write a script that can converto fahrenheith to and from Celsius
+
+let btn1 = document.querySelector('.btn1');
+btn1.addEventListener('click', function() {
+	let inputV = document.querySelector('.input').value;
+	fToC(inputV); })
+
+let btn2 = document.querySelector('.btn2');
+btn2.addEventListener('click', function() {
+	let inputV = document.querySelector('.input').value;
+	cToF(inputV); })
+
+function cToF(v) {
+let temp = v;
+let convert = (1.8 * v) + 32;
+let round = convert.toFixed(1);
+document.querySelector('.demo').innerHTML = v + ' C&#176 is' +
+' equal to ' + round + ' F&#176';
+}
+
+function fToC(v) {
+let temp = v;
+let convert = (v - 32) / 1.8;
+let round = convert.toFixed(1);
+document.querySelector('.demo').innerHTML = v + ' F&#176 is' +
+' equal to ' + round + ' C&#176';
+}
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

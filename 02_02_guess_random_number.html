@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Guess Randon Number</title>
+
+<style>
+	.btn {
+		background-color:red;
+		color: white;
+		border: none;
+		padding: 1rem;
+		cursor:pointer;
+	}
+	
+	.btn2 {
+		background-color: blue;
+		color: white;
+		border: none;
+		padding: .5rem;
+		cursor: pointer;
+	}
+</style>
+
+</head>
+<body>
+<h2>Guess a random number between 1 and 10</h2>
+<p><b> Step 1:</b></p>
+<button type="click" class="btn">Click Number Generator</button>
+<span class="random"> Status: <span class="random2" style="color:red">waiting for user</span>
+<br>
+<br>
+<p><b> Step 2:</b></p>
+<span>Insert guess here: </span>
+<input type="number" maxlength="2" class="guess">
+
+<button class="btn2" type="click" onclick="compare()">Submit guess!</button>
+<h4 class="answer"></h4>
+<div class="reset">
+</div>
+
+<script>
+//Vanilla Javascript exercise:
+/* Create a game where user can guess a random generated number 
+between 1 and 10 */
+// Steps taken:
+// creates listener for function that generates a random number upon click.
+// also creates a message to give user feedback.
+// creates global empty variable (g) that function will return a new value for.
+// assigns the value of the random number to the global variable
+
+// creates a second function that takes input value (v) and compares it to g
+// Sets up if-statements with corresponding messages added to HTML
+
+/* function lastly creates new button that appends a textnode, and also creates attribute 'onckick' which has a value that invokes the function 'reset()' that resets the game */
+
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', generator);
+
+let g ='';
+
+function generator() {
+	const randNumb = Math.ceil(Math.random() * 10);
+	const status = document.querySelector('.random2');
+	status.style.color ="green";
+	status.childNodes[0].nodeValue = "Computer has generated a number!"
+
+	g = randNumb;
+}
+ 
+function compare() {
+	
+	let v = document.querySelector('.guess').value;
+	if (v === "" || g === "") {
+		v = "empty";
+	}
+	if (v == "empty")  {
+		document.querySelector('.answer').innerHTML = 'Please click \'Number Generator\' button,'
+		+ ' and also submit a guess. (Number between 1–10)';
+	} else if (v == g) {
+		document.querySelector('.answer').innerHTML = "You guessed " + v +
+		", the computer generated " + g + ". You guessed right!";
+	} else if ( v != g)  {
+		document.querySelector('.answer').innerHTML = "You guessed " + v +
+		", the computer generated " + g + ". Sorry, your guess didn't match.";
+	}
+	const reset = document.querySelector('.reset');
+	const button = document.createElement('button');
+	const textNode = document.createTextNode('Reset');
+	button.appendChild(textNode);
+	reset.appendChild(button);
+	const att = document.createAttribute("onclick");
+  	att.value = "reset()";
+  	button.setAttributeNode(att);
+
+	console.log(v)
+	console.log(g)
+};
+
+function reset() {
+	window.location.reload();
+}
+</script>
+	
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

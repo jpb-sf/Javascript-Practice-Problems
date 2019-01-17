@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Check the value of two inputs</title>
+</head>
+<html>
+<body>
+
+<input type="text" class="input">
+<input type="text" class="input2">
+<button onclick="test()">Try</button>
+
+</body>
+<script>
+// Vanilla Javascript exercise:
+/* Check two given numbers and return true if one of the numbers is 50,
+or their sum is 50 */
+function test (){
+let input = document.querySelector('.input').value;
+let input2 = document.querySelector('.input2').value;
+input = + input;
+input2 = + input2;
+if (input == 50 || input2 == 50 || (input + input2) == 50) {
+	console.log(true)
+} else {
+	console.log(false)
+}
+}
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

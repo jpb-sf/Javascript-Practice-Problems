@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Calculate how many days til Christmas</title>
+</head>
+<html>
+
+
+<body>
+
+<p class="demo"></p>
+
+<script>
+
+// Vanilla Javascript exercise:
+// Calculate how many days til Christmas
+let now = new Date();
+
+let cMas = new Date(now.getFullYear(),11, 25);
+
+if (now.getMonth()==11 && now.getDate() > 25)
+{
+    cMas.setFullYear(now.getFullYear() + 1)
+}
+
+let oneDay = 1000 * 60 * 60 * 24;
+console.log(oneDay)
+
+document.querySelector('.demo').innerHTML = 
+Math.ceil((cMas.getTime() - now.getTime()) / oneDay) +
+" days left until Christmas!"
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

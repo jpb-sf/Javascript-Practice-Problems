@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<titleharset="UTF-8">
+<title>Find value closest to 100</title>
+</head>
+<html>
+<body>
+<p>Find the value closest to 100. </p>
+<span>#1: </span><input type="text" class="input"><br>
+<span>#2: </span><input type="text" class="input2"><br>
+<br>
+<button onclick="test()">Find closest</button>
+
+</body>
+<script>
+// Vanilla Javascript exercise:
+/* Find the value which is nearest to 100 from two different given integer values */
+function test (){
+let input = document.querySelector('.input').value;
+let input2 = document.querySelector('.input2').value;
+
+let diff1 = Math.abs(input - 100);
+let diff2 = Math.abs(input2 - 100);
+
+	if(diff1 != diff2) {
+
+		if (diff1 < diff2) {
+			console.log(input + ' is closer to 100')
+			} else {
+				console.log(input2 + ' is closer to 100')
+			}
+		}
+		if (diff1 === diff2) {
+			console.log(input + ' and ' + input2 + ' are the same distance from 100.')
+		}
+}
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
