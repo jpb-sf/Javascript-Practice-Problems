@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<titleharset="UTF-8">
 <title>Check if string passes a test</title>
 </head>
 <html>
@@ -22,13 +21,7 @@ function test (){
 const input = document.querySelector('.input').value;
 const input2 = document.querySelector('.input2').value;
 const input3 = document.querySelector('.input3').value;
-if (input > input2 && input > input3){
-	console.log(input + ' is the largest number.')
-} else if (input2 > input && input2 > input3) {
-	console.log(input2 + ' is the largest number.')
-} else if (input3 > input && input3 > input2) {
-	console.log(input3 + ' is the largest number.')
-}
+console.log(Math.max(input, input2, input3)) 
 }
 </script>
 </html>
