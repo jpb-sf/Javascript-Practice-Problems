@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>New string 3 lowercase</title>
+</head>
+<html>
+<body>
+<p>Create new string with first 3 characters are in lower case. If the string length is less than 3 convert all the characters to upper case. </p>
+<p class="test">THIS is a test.</p>
+
+<button onclick="test()">Return new string</button>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create new string with first 3 characters are in lower case. If the string length is less than 3 convert all the characters in upper casee */
+function test (){
+	let str = document.querySelector('.test').innerHTML;
+	let first3 = str.substr(0,3).toLowerCase();
+	let remain = str.substr(3);
+	
+	console.log(first3 + remain)
+	}
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

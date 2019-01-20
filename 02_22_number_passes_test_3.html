@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Number passes test 3</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Check two given non-negative integers and if one of the number but not both is a multiple of 7 or 11 */
+
+function numberTest (a, b){
+	if(!((a % 7 === 0) || (a % 11 === 0)) && ((b % 7 === 0) || (b % 11 === 0))) {
+	return ((a % 7 === 0) || (a % 11 === 0)) || ((b % 7 === 0) || (b % 11 === 0))
+	} else {
+		return false
+	}
+}
+
+console.log(numberTest(21, 7))
+console.log(numberTest(25, 10))
+console.log(numberTest(33, 9))
+console.log(numberTest(21, 15))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

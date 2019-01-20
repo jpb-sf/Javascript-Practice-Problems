@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Replace Character in String</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/*  Write a JavaScript program to replace every character in a given string with the character following it in the alphabet */
+
+function replace(str) {
+	let i;
+	let string = str.split('');
+
+	for(i = 0; i < string.length; i++)
+		switch(string[i]) {
+			case "z": string[i] = "a";
+			break;
+
+			case "Z": string[i] = "A";
+			break;
+
+			case ' ': string[i] = " ";
+			break;
+
+			default: string[i] = String.fromCharCode(1 + string[i].charCodeAt(0));
+			break;
+		}
+		return string.join('');
+	}
+		
+console.log(replace('The Man Behind the Iron Mask'))
+
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

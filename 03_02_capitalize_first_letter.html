@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Caplitalize  first letter</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise:
+/* Capitalize the first letter of each word in a given string. */
+
+// My way
+
+function cap(str) {
+let newString = '';
+let i;
+	for (i = 0; i < str.length; i++) {
+			newString += str[i];
+		if (str[i] == " ") {
+			i++;
+			let uC = str[i].toUpperCase();
+			newString += uC;
+		}
+	}
+		return newString;
+}
+console.log(cap('Hey how are you today?'))
+
+// 2nd way
+
+function cap2(str) {
+	let split = str.split(" ")
+	let i;
+	for(i = 0; i < split.length; i++) {
+		split[i] = split[i].charAt(0).toUpperCase() + split[i].substring(1);
+	}
+	return split.join(' ');
+}
+console.log(cap2('This is a second way of doing it'))
+
+// 3rd way (recommended)
+
+function cap3(str) {
+	let newStr = str.split(' ');
+	let i;
+	for (i = 0; i < newStr.length; i ++) {
+		newStr[i] = newStr[i][0].toUpperCase() + newStr[i].substr(1);
+	}
+return newStr.join(' ')
+}
+console.log(cap3('One more time for the record books?'))
+
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

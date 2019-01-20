@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Check if last digits are all the same</title>
+</head>
+<html>
+<body>
+<p>Enter three numbers to check if last digit is the same in all values. </p>
+<span>#1: </span><input type="text" class="input"><br>
+<span>#2: </span><input type="text" class="input2"><br>
+<span>#3: </span><input type="text" class="input3">
+<br>
+<br>
+<button onclick="test()">Check</button>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Check if last digits are all the same */
+function test (){
+	const input = document.querySelector('.input').value;
+	const input2 = document.querySelector('.input2').value;
+	const input3 = document.querySelector('.input3').value;
+
+		if ((input.charAt(input.length - 1)) == (input2.charAt(input2.length - 1)) && (input.charAt(input.length -1)) == (input3.charAt(input3.length -1))) {
+			console.log(true);
+		} else {
+			console.log(false);
+		}
+}
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
