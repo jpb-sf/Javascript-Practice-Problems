@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Make String Copies</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Make a program to create a new string of specified copies (positive number) of a given string */
+
+// my solution
+function copier(str, number) {
+	let string = '';
+	let i = number;
+	for (i; i > 0; ) {
+		string += str;
+		i--;
+	}
+	return string
+}
+
+console.log(copier('Please make copies. ', 4))
+
+
+
+// given answer
+function string_copies (str, n) 
+{
+  if (n < 0)
+    return false;
+  else
+  return str.repeat(n);
+}
+console.log(string_copies("abc ", 5));
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

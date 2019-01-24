@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Format commas</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise:
+/* Divide two positive numbers and return a string with properly formatted commas */
+
+// given answer
+
+function division_string(n1, n2) {
+
+let div = Math.round(n1 / n2).toString();
+let result_array = div.split("");
+
+	if (div >= 1000)
+	{
+		for (var i = div.length - 3; i > 0; i -= 3) 
+		{
+			result_array.splice(i, 0, ",");
+		}
+	}
+
+result_array = result_array.join('');
+return result_array
+
+}
+
+console.log(division_string(12000000, 5));
+
+
+
+// my answer is bad
+
+
+function divider(v1, v2) {
+	let answer = (v1 / v2).toFixed(0);
+	let stringify = "" + answer;
+	let beforecomma;
+	let aftercomma;
+	let aftercommaNew;
+
+	
+	if (answer < 999999) {
+		if(answer > 999 ) {
+			aftercomma = stringify.slice(-3, 4);
+			beforecomma = stringify.slice(0, 1);
+		}
+		if(answer > 9999 ) {
+			aftercomma = stringify.slice(-3, 5);
+			beforecomma = stringify.slice(0, 2);
+		}
+		if(answer > 99999 ) {
+			aftercomma = stringify.slice(-3, 6);
+			beforecomma = stringify.slice(0, 3);
+		}
+		answer = beforecomma + "," + aftercomma; 
+		return answer;
+	}
+
+	else if(answer > 999999) {
+		if(answer > 999999 ) {
+			aftercommaNew = stringify.slice(1, 4)
+			aftercomma = stringify.slice(4, 7);
+			beforecomma = stringify.slice(0, 1);
+		}
+		if(answer > 9999999 ) {
+			aftercommaNew = stringify.slice(2, 5)
+			aftercomma = stringify.slice(5, 8);
+			beforecomma = stringify.slice(0, 2);
+		}
+		answer = beforecomma + "," + aftercommaNew +"," + aftercomma; 
+		return answer;
+	}
+}
+
+console.log(divider(12000, 5))
+console.log(divider(125000, 5))
+console.log(divider(1225000, 5))
+console.log(divider(12255000, 5))
+console.log(divider(122255000, 5))
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

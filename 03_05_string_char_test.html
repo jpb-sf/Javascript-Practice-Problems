@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Check if characters are separated by exactly 2 places</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Check if the characters a and b are separated by exactly 2 places anywhere (at least once) in a given string */
+
+
+// Method 1 
+
+function check(str) {
+
+	return Boolean(str.match((/(b.{2}a)/) || (/a.{2}b/)));
+}
+
+console.log(check('party'))
+console.log(check('arabic'))
+console.log(check('banal'))
+
+
+//Method 2 (given answer)
+
+function ab_Check(str) {
+ 
+    return (/a..b/).test(str) || (/b..a/).test(str);
+ }
+
+console.log(check('party'))
+console.log(ab_Check('arabic'))
+console.log(ab_Check('banal'))
+
+
+// Method 3
+function test(str) {
+	let result = 0;
+	let i;
+	for (i = 0; i < str.length; i++) {
+		if ((str[i] === "a" && str[i + 3] === "b") || (str[i] === "b" && str[i + 3] === "a")) {
+			// increment variable to set up an if statement below
+			result++;
+		} else {
+			result;
+		}
+		}
+	return Boolean(result > 0)
+	}
+
+console.log(test('light bulb'))
+console.log(test('arabic'))
+console.log(test('banal'))
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

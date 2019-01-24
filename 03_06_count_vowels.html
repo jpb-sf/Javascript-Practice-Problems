@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Count vowels</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Count the number of vowels in a given string */
+
+//My way
+function counter(str) {
+	let string = str.toLowerCase()
+	let ctr = 0;
+	let i;
+	for (i = 0; i < string.length; i++)
+
+		if(string[i] === "a" || string[i] === "e" || string[i] === "i" || string[i] === "o" || string[i] === "u")
+			ctr++;
+		else {
+			ctr;
+		}
+		return ctr;
+}
+
+console.log(counter('Today is Martin Luther King day'))
+
+
+
+// Faster way (given answer)
+function vowel_Count(str)
+{ 
+	return str.replace(/[^aeiou]/g, "").length; 
+}
+
+console.log(counter('Today is Martin Luther King day'))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
