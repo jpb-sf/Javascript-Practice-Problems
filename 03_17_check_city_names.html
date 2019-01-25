@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>City Finder</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a program to display the city name if the string begins with "Los" or "New" otherwise return blank */
+
+// solution 1
+function cityFinder(str) {
+	return (str.startsWith('Los') || str.startsWith('New')) ? str : '';
+	}
+
+console.log(cityFinder('Las Vegas'))
+console.log(cityFinder('Los Gatos'))
+console.log(cityFinder('New Amsterdam'))
+
+// solution 2
+function cityFinder2(str) {
+	return (str.match(/^Los/) || str.match(/^New/)) ? str : '';
+	}
+
+console.log(cityFinder2('Las Vegas'))
+console.log(cityFinder2('Los Gatos'))
+console.log(cityFinder2('New Amsterdam'))
+
+
+// solution 3
+function cityFinder3(str) {
+	let firstThree = str.substr(0,3);
+	if(firstThree === "Los" || firstThree === "New") {
+		return str;
+	} else {
+		return '';
+	}
+	}
+
+console.log(cityFinder3('Las Vegas'))
+console.log(cityFinder3('Los Gatos'))
+console.log(cityFinder3('New Amsterdam'))
+
+
+// solution 4 (given answer)
+function city_name(str) {
+  if (str.length >= 3 && ((str.substring(0, 3) == 'Los')
+                          || (str.substring(0, 3) == 'New')))
+   
+      {
+          return str;
+    }
+
+  return '';
+}
+
+console.log(city_name("London"));
+console.log(city_name("New York"));
+console.log(city_name("Los Angeles"));
+console.log(city_name("London"));
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

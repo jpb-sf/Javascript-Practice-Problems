@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Remove first last character</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a program that makes a new string without the first and last character of a given string */
+
+//First method
+
+function remove (string) {
+	let str = string.split('');
+	str.pop();
+	str.shift();
+	return str.join('')
+}
+
+console.log(remove('Her Majesty\'s secret service'))
+
+
+//Second method
+function remover (string) {
+	str = string.substring(1, string.length - 1)
+	return str;
+}
+
+console.log(remover('Her Majesty\'s secret service'))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

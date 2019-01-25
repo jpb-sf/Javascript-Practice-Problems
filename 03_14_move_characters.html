@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Concat two strings except</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a program to move last three characters to the start of a given string. The string length must be greater or equal to three.  */
+
+// my way
+function move(str) {
+	let newStr = str.substring(str.length - 3) + str.substring(0, str.length - 3)
+	if(string.length <= 3) {
+		return "Please enter enter a string with at least characters"
+		} else{
+			return newStr;
+		}
+}
+console.log(move('This is a test'))
+
+// given answer
+
+function right_three(str) {
+     if (str.length >= 3)
+       {
+         return str.slice(-3) + str.slice(0, -3);
+       }
+  return str;
+}
+console.log(right_three("Python"));
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
