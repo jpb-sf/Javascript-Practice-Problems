@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Swap array elements</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create program to swap the first and last elements of a given array of integers. The array length should be at least 1. */
+
+// my solution
+
+const swapElem = function(arr) {
+	let lastElem = arr.pop()
+	let firstElem = arr.shift()
+	arr.unshift(lastElem);
+	arr.push(firstElem);
+	return arr
+}
+
+console.log(swapElem([23, 89, 40, 21, 16]))
+
+
+// solution 2 (given answer)
+
+const swapElem2 = function(arr) {
+	[arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
+	return arr
+}
+
+console.log(swapElem([23, 89, 40, 21, 16]))
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

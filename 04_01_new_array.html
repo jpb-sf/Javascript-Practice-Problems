@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Make new array</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create program to create a new array taking the middle elements of the two arrays of integer and each length 3 */
+
+
+//My solution
+let makeArray = function (a1, a2) {
+	let newArr = [];
+	newArr[0] = a1[1];
+	newArr[1] = a2[1];
+	return newArr;
+}
+
+let arr1 = [34, 9, 48];
+let arr2 = [39, 55, 92];
+console.log(makeArray(arr1, arr2))
+
+//Better solution 
+
+let makeArray2 = function (a1, a2) {
+	let newArr = [];
+	newArr.push(a1[1], a2[1])
+	return newArr;
+}
+
+let arr3 = [34, 9, 48];
+let arr4 = [39, 55, 92];
+console.log(makeArray2(arr1, arr2))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

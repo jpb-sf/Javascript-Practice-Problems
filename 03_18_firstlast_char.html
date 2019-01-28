@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Check for p's</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a program to display the city name if the string begins with "Los" or "New" otherwise return blank */
+
+function pCheck (str) {
+	let newStr = str.slice(1, -1);
+	return (str[0] === "p" || str[0] === "P" || str[str.length -1] === "p" || str[str.length - 1] === "P") ? newStr : str;
+}
+
+console.log(pCheck('Pale moon'))
+console.log(pCheck('apricot'))
+console.log(pCheck('parlance'))
+console.log(pCheck('Aesop'))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

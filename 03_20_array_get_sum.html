@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Rotate left</title>
+</head>
+<html>
+<body>
+
+<p class="demo">ABCD</p>
+<button onclick="rotate()">Shift left</button>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Rotate the elements left of a given array of integers of length 3(i put 4) */
+
+// Array solution 1 (only works once)
+function rotArr(arr) {
+	return arr[arr.length - 1] + "," + arr.slice(0, -1);
+}
+
+let arr1 = ['A', 'B', 'C', 'D']
+console.log(rotArr(arr1))
+
+
+// Array solution 2 (given answer)
+function rotArr2(array) {
+	 return [array[1], array[2], array[3], array[0]];
+}
+let arr2 = ['A', 'B', 'C', 'D']
+console.log(rotArr2(arr2))
+
+
+// My HTML solution. (not array.)
+function rotate () {
+	let char = document.querySelector('.demo').innerHTML;
+	document.querySelector('.demo').innerHTML = char[char.length - 1] + char.slice(0,-1);
+}
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

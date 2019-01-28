@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Longest string </title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create program to find the longest string from an given array of strings */
+
+let findLong = function(arr) {
+	let biggest;
+	let filter = arr.reduce(function(acc, item) {
+		if (acc < item.length) {
+			acc = item.length;
+		}
+		return Math.max(item.length);
+	}, 0)
+}
+
+console.log(findLong(['John', 'Paul', 'George', 'Ringo']))
+
+
+
+/*let findLong = function(arr) {
+	let reduce = arr.reduce(function(acc, item){
+		let biggest;
+		if(item.length > item.length) {
+			biggest = item.length;
+		} 
+		return biggest
+	})
+}
+
+console.log(findLong(['John', 'Paul', 'George', 'Ringo']))*/
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

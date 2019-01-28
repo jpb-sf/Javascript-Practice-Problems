@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Array Test 1</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Write a JavaScript program to find the larger value between the first or last of an array and set all the other elements with that value. Display the new array */
+
+// Solution 1
+
+function numChecker(arr) {
+	let i = 0;
+	let bigFirst = arr[0]
+	let bigLast = arr[arr.length - 1];
+
+	if (arr[0] > arr[arr.length - 1]) {
+		while (i < arr.length) {
+			arr[i] = bigFirst; 
+			i++
+		} return arr;
+	} else {
+			while(i < arr.length) {
+				arr[i] = bigLast;
+				i++ 
+			}
+			return arr;
+		}
+}
+
+console.log(numChecker([12, 68, 51, 104, 91]))
+console.log(numChecker([134, 1, 59, 16, 80]))
+
+// Solution 2
+
+// the 'item' argument is passed as a value, and can't be used to change the value
+// because primitives passed in are values only, and don't store a location
+// so 'item' on a itteration method is the same value as 'array[index]'' but in order
+// to permanently change those array values, use array[index]
+function numChecker2(arr) {
+	
+	if (arr[0] < arr[arr.length - 1]) {
+		let forEach = arr.forEach(function(item, index, array) {
+				array[index] = array[0];
+			})
+			return arr; 
+	} else {
+		let forEach = arr.forEach(function(item, index, array) {
+				array[index] = array[array.length - 1];
+			})
+		return arr;
+	}
+}
+
+console.log(numChecker2([12, 68, 51, 104, 91]))
+console.log(numChecker2([134, 1, 59, 16, 80]))
+
+
+// Solution 3 (experiment) 
+// 'item' parameter can be used to change value if the argument is a reference type (object)
+// reference types store a memory location of an object, and are passed in as such
+
+function numChecker3(obj) {
+	
+	let forEach = obj.forEach(function(item, index, array) {
+			item.n ="hello"
+		
+		})
+	return obj
+		}
+
+var x = [{n: 102, n2: 90, n3: 43}];
+
+console.log(numChecker3(x))
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

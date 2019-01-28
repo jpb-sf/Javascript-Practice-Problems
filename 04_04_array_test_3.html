@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Array Test 3</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create program to test if an array of integers of length 2 does NOT contain 1 or a 3 */
+
+const arrayTest = function(arr) {
+	if(arr.length === 2) {
+		if(arr.includes(1) || arr.includes(3)) {
+			return false
+		} else {
+			return true
+		}
+	}
+}
+
+console.log(arrayTest([22, 3]))
+console.log(arrayTest([5, 87]))
+console.log(arrayTest([1, 44]))
+
+
+//solution 2
+
+const arrayTest2 = function(arr) {
+	if(arr.length === 2) {
+		if(arr.indexOf(1) == false || arr.indexOf(3) == false) {
+			return true
+		} else {
+			return false
+		}
+	}
+}
+
+console.log(arrayTest([22, 3]))
+console.log(arrayTest([5, 87]))
+console.log(arrayTest([1, 43]))
+
+
+//solution 3
+
+const arrayTest3 = function(arr) {
+	if(arr.length === 2) {
+		if((arr[0] || arr[1]) === 1 || (arr[0] || arr[1]) === 3)  {
+			return false
+		} else {
+			return true
+		}
+	}
+}
+
+console.log(arrayTest3([3, 22]))
+console.log(arrayTest3([5, 87]))
+console.log(arrayTest3([1, 43]))
+
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
