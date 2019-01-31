@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Finding max value, passing in kth</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (didn't solve alone)
+/* Create a program to find the kth greatest element of a given array of integers */
+
+
+function nthlargest(arra,highest){
+			var x = 0,
+				y = 0,
+				z = 0,
+				temp = 0,
+				tnum = arra.length, 
+				flag = false, 
+				result = false; 
+   
+			while(x < tnum){
+				y = x + 1; 
+				
+				if(y < tnum){
+					for(z = y; z < tnum; z++){ //z = 5
+						
+						if(arra[x] < arra[z]){ // if first number is less than 2nd
+							temp = arra[z]; // storing greater number (56) (88) (90)
+							arra[z] = arra[x]; // array[z] z is smaller number (88)
+							arra[x] = temp; // array[x] is greater (56) (88) (90)
+							flag = true; // flag is true
+							return console.log(arra[z])
+						}else{
+							continue; //OH WOW! CONTINUE BABY
+						}	
+					}					
+				}
+				
+				if(flag){
+					flag = false;
+				}else{
+					x++; 
+					if(x === highest){ 
+                      
+						result = true;
+					}	
+				}
+				if(result){ 
+					break;
+				}
+			}
+
+			return (arra[(highest - 1)]); // - 1 cause the index is - 1, and it's reading a descending sorted array. 3rd highest number will be in the 3rd number (index 2)
+		}
+		
+console.log(nthlargest([ 43, 56, 23, 88, 90, 99, 652, 89], 4)); // Finding the second highest v
+//[56,43,23,88,90,99,652,89]
+//[88,56,43,23,90,99,652,89]
+//[90,88,56,43,23,99,652,89] //this works by setting array[x] as x remains 0, it keeps putting the new big number into index 0 (descending array)
+//and the loser of the that round goes into array[z] z = y +1 (the second index)
+
+
+
+
+
+
+
+
+//value:
+//The most straightforward implementation, without modifying the original array:
+// NOTICE: not using a function! Ha!
+
+var arr = Array('20','120','111','215','54','78'),
+biggest = -Infinity,
+next_biggest = -Infinity;
+
+for (var i = 0, n = arr.length; i < n; ++i) {
+    var nr = +arr[i]; // convert to number first
+
+    if (nr > biggest) {
+        next_biggest = biggest; // save previous biggest value
+        biggest = nr;
+    } else if (nr < biggest && nr > next_biggest) {
+        next_biggest = nr; // new second biggest value
+    }
+}
+
+console.log(next_biggest);
+
+
+// DETOUR this is illustrating sort modifies original array. once it't used
+// I cannot get the value of 'let a' (orginal) back
+let a = [3,1,2];
+let b = a.sort();
+console.log(a)
+
+
+//test on this increment thing
+
+var p = 0;
+var l = p + 1;
+l++ // it does increment here. 
+console.log(l)
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

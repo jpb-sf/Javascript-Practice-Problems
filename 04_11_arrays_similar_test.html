@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Check if arrays are similar</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise:
+/* Create program to check whether two arrays of integers of same length are similar or not. The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements */
+
+// first solution
+
+const arrayTest = function(arr1, arr2) {
+	let i;
+	if (arr1.length != arr2.length ) {return false}
+	for (i = 0; i < arr1.length; i++) {
+		if(arr1[i] != arr2[i]) {
+			return false
+		}else{
+			return true
+		}
+	}
+}
+console.log(arrayTest([1, 9, 3], [1, 9, 3]))
+console.log(arrayTest([2, 7, 3], [1, 9, 3]))
+
+
+// 2nd solution
+
+function arrayTest2(arr1, arr2){
+if(arr1 + arr2 === arr2 + arr1){
+return true;
+}else{
+return false;
+}
+}
+console.log(arrayTest2([1,2,4],[1,2,4]));
+console.log(arrayTest2([2,2,4],[1,2,4]));
+console.log(arrayTest2([2,3,6],[2,3,6]));
+
+
+//NOW TO TRY LOOPING THROUGH TWO ARRAYS to find matches anywhere
+
+let diff = function(arr1, arr2) {
+	let result = []
+	for(var i in arr2) {
+		if(arr1.indexOf(arr2[i]) > -1) {
+			result.push(arr2[i]);
+		}
+	}
+	return result
+}
+
+console.log(diff(['cat', 'rat', 'bat', 'nat'], ['mat', 'tat', 'gat', 'rat']))
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

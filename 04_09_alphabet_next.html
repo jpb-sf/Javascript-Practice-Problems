@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Next letter </title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create program to replace each character of a given string by the next one in the English alphabet. */
+
+let alphaNext = function(str) {
+	let newStr = '';
+	let newLetter;
+	let i;
+	for (i = 0; i < str.length; i++) {
+		newLetter  = String.fromCharCode((str.charCodeAt(i)) + 1);
+		newStr += newLetter
+	}
+		return newStr
+}
+console.log(alphaNext('Lochness Monster'))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
