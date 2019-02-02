@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Finding max diff</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a program to find the maximal difference between any two adjacent elements of a given array of integers*/
+
+let difFinder = function(arr)  {
+	let tot = 0,
+	maxTotal = -Infinity
+	n = 0;
+
+	for (let i = 0; i < arr.length; i++) {
+		n = i + 1;
+		tot = Math.abs(arr[i] - arr[n]);
+		if (tot > maxTotal) {
+			maxTotal = tot; //29
+		} else {
+			continue
+		}
+	}
+	return maxTotal
+}
+console.log(difFinder([25, 4, 19, 7, 26, 3, 41]))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

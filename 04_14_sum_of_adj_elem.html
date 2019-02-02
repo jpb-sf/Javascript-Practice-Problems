@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Finding max val of sum adjacent elemt</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved with help)
+/* Create a program to find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order.) of a given array of positive integers */
+
+// first way finds max value sum of all consecutive numbers of 2.
+
+let adder = function(arr, k)  {
+	let tot = 0,
+	maxTotal = -Infinity
+	n = 0;
+
+	for (let i = 0; i < arr.length; i++) {
+		n = i + 1;
+		tot = arr[i] + arr[n];
+		if (tot > maxTotal) {
+			maxTotal = tot; //29
+		} else {
+			continue
+		}
+	}
+	return maxTotal
+}
+console.log(adder([25, 4, 19, 7, 26, 3]))
+
+
+
+// Solution with the k value of consecutive numbers. (no modifying of array needed)
+//  Note: k is k - 1 from current indexi. so run up to index (y) of y = i + (k - 1) 
+
+
+let adder3= function(arr, k)  {
+	let tot = 0,
+	maxTotal = -Infinity,
+	maxTotal2 = -Infinity,
+	n = 0;
+
+	if( k < 2) {
+		console.log('enter a k value with a minimum of 2')
+	}
+	
+	for (let i = 0; i < arr.length; i++) {
+		n = i + 1;
+		tot = arr[i] + arr[n];
+		if (tot > maxTotal) {
+			maxTotal = tot; 
+		} 
+		if(k > 2) {
+			let y = n;
+			for (y; y < i + k - 1; y++) {
+				tot += arr[y + 1]
+				if (tot > maxTotal) {
+					maxTotal = tot;
+				}
+				else {
+					continue
+				}
+			}
+		}
+	}
+
+	return maxTotal
+	
+}
+console.log(adder3([25, 4, 19, 7, 26, 3], 3)) 
+console.log(adder3([25, 4, 19, 7, 26, 3], 2)) 
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

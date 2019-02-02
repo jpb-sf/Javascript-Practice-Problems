@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Finding max diff all</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a program to find the number which appears most in a given array of integers. */
+
+// my answer
+let mostFreq = function(arr)  {
+	let newNum = 0,
+	ctr = 0,
+	newTop = 0,
+	newArr = [],
+	newMax = 0,
+	prevMax = -Infinity;
+	
+
+	for (let i = 0; i < arr.length; i++) {
+		let n = i + 1;
+		for (n; n < arr.length; n++) {
+			if (arr[i] === arr[n])
+				newNum = arr[i];
+			ctr++
+			newTop = ctr;
+		
+				if (newTop > prevMax) {
+					newMax = newNum;
+					prevMax = newTop;
+				}
+		}
+		ctr = 0;
+	}
+	return console.log(newMax);
+}
+
+console.log(mostFreq([44, 5, 24, 44, 3, 6, 11, 23, 44, 3, 11, 44, 3, 28]));
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
