@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Can strings match?</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to check whether it is possible to rearrange characters of a given string in such way that it will become equal to another given string */
+
+ // 1st soltion
+let match = function(str, str2) {
+	let tempArr1 = [],
+	tempArr2 = [],
+	strArr = str.split(''),
+	strArr2 = str2.split('')
+
+	for (let i = 0; i < str.length; i++) {
+		
+		for (let n = 0; n < strArr.length; n++) {
+			if (strArr[i] === strArr2[n]) {
+				tempArr1.push(strArr.splice(i, 1));
+				tempArr2.push(strArr2.splice(n, 1));
+				n = -1;
+			} 
+		}
+	}
+	return console.log((strArr.length > 0) ? false : true)
+}	
+
+let call = match('391','193')
+let call2 = match('abcd','dcae');
+let call3 = match('nhtupor','upnorth')
+
+
+
+
+// 2nd solution
+let match2 = function(str, str2) {
+	strArr = str.split('').sort().join()
+	strArr2 = str2.split('').sort().join()
+
+	return console.log((strArr2 === strArr) ? true : false)
+}
+
+let call4 = match2('391','193')
+let call5 = match2('abcd','dcae');
+let call6 = match2('nhtupor','upnorth')
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

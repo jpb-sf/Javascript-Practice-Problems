@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>String into Palindrome</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (didn't solve alone)
+/* Create a program to find the shortest possible string which can create a string to make it a palindrome by adding characters to the end of it. */
+
+
+function build_Palindrome(str) {
+  var flag;
+  for (var j = str.length;; j++) {
+  	// ^^ so this parent loop kicks out length by 1 (beyond length) on the additional passes
+    flag = true;
+    for (var i = 0; i < j - i - 1; i++) { 
+    	// loop increments the string values[i], i will reset once broken out of
+    	// the 'four loop test' will be true upto the half way on the first pass of J
+  
+      if (j - i - 1 < str.length && str[i] != str[j - i - 1]) { 
+      	// so this loop, and if is checking whether the coorleating indexes
+      	// are the same, as they will be in a palindrome. 
+      	// str[0] and str[7] in a string w/ the length of 8 would mirror in a pdrome
+      	// this is finding where the 'adding onto' needs to begin essentially.
+      	// this passes on the 3rd time of the parent loop,
+      	// and 3rd time through on the nested loop. j = 2++, which is (j = length + 2) == 10
+      	// i increments to 2, it will meet 7. which is str[2] != str[7]
+      	// those are the same. if statement doesn't pass
+      	// flag is true
+
+        flag = false;
+        
+      break;
+      }
+    } // if they do mirror, flag is true. next step --->
+    if (flag) {
+      for (var i = str.length; i < j; i++) {
+      	// this loop will run as long as the str length is shorter than the (beyond length)
+      	// beyond length, j is set 10, so it will run this twice.
+      	// vv str[j - i - 1] is the value that is needed to add
+      	// and will will decrement propertly backwards with i++
+		str += str[j - i - 1];
+      }
+      return str;
+    }
+  }
+}
+
+console.log(build_Palindrome("abcdeedc"))
+console.log(build_Palindrome("122"))
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Sum of Differences</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a program to compute the sum of absolute differences of consecutive numbers of a given array of integers. */
+
+// 1st solution
+let diffFinder = function(arr) {
+	let diff = 0,
+	sum = 0;
+	for (let i = 0; i < arr.length; i++) {
+		let n = i + 1;
+		for (let y = n; y < arr.length; y++) {
+			diff = Math.abs(arr[i] - arr[n]);
+			sum += diff;
+		}
+	}
+	return console.log(sum);
+}
+
+let call = diffFinder([44, 5, 29, 103]);
+let call2 = diffFinder([2, 4, 8]);
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
