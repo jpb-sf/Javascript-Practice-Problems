@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Largest Remaining</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to find the maximal number from a given positive integer by deleting exactly one digit of the given number */
+
+
+//my way
+
+let removeOne = function(number) {
+	let num = number.toString(),
+	temp,
+	temp2,
+	tempTotal,
+	highest = -Infinity,
+	
+	for (let i = 0; i < num.length; i++) {
+		if (i == 0) {
+		tempTotal = Number(num.substr(i + 1));
+			}
+
+		if (i > 0) {
+		temp  = num.substr(0, i)
+		temp2 = num.substr(i + 1)
+		tempTotal = Number(temp.concat(temp2));
+		}
+
+		if (tempTotal > highest) {
+			highest = tempTotal;
+		}
+	}
+	return console.log(highest);
+	
+}
+
+let call = removeOne(4234);
+let call2 = removeOne(809);
+let call3 = removeOne(2317);
+
+
+
+// 2nd solution
+
+let removeOne2 = function(number) {
+	let num = number.toString(),
+	temp,
+	highest = -Infinity;
+	for (let i = 0; i < num.length; i++) {
+		temp = Number(num.replace(num[i], ''));
+	if (temp > highest) {
+			highest = temp;
+		}
+	}
+	return console.log(highest);
+	
+}
+
+let call4 = removeOne2(4234);
+let call5 = removeOne2(809);
+let call6 = removeOne2(2317);
+
+// given answer
+
+function digit_delete(num) {
+    var result = 0,
+        num_digits = [];
+    while (num) {
+    	//this is interesting. modulus of 10 is always the last digit of a given number.
+    	//pushing the modulus into an empty array, reverses the number into array.
+    	// 
+        num_digits.push(num % 10);
+        //console.log(num_digits)
+        num = Math.floor(num / 10);
+        //^^this updates the number 1245/10 = 124.5. Floor of that is 124. while loops.
+    }
+    for (var index_num = 0; index_num < num_digits.length; index_num++) {
+        var n = 0;
+        for (var i = num_digits.length - 1; i >= 0; i--) {
+            if (i !== index_num) {
+                n = n * 10 + num_digits[i]; //1 // 12 // 124 
+                							//1 // 12 // 125
+                							//1 // 14// 145
+                							//2 // 24 // 245
+            }
+        }
+        //Math.max is comparing the two
+        result = Math.max(n, result); n// //124 or 125 // 125 //145 // 245
+    }
+    return result;
+}
+
+console.log(digit_delete(100));
+console.log(digit_delete(10));
+console.log(digit_delete(1245))
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

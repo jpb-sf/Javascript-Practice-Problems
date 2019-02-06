@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Largest Difference</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer*/
+
+
+let diffFinder = function(arr, val) {
+    let newArr = [],
+    highest = -Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+    	let n = i + 1;
+    	for (let j = n; j < arr.length; j++) {
+    		newArr.push(Math.abs(arr[i] - arr[j]));
+    	}
+    }
+	for (let y = 0; y < newArr.length; y++) {
+
+		if (newArr[y] < val) {
+			if (newArr[y] > highest) {
+				highest = newArr[y]
+			}
+		} 
+	}
+	return highest
+}
+
+console.log(diffFinder([23, 44, 10, 15, 58, 12], 15))
+console.log(diffFinder([10, 20, 30, 40], 25))
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

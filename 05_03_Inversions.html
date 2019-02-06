@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Inversions/title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (didnt' solve alone)
+/* Create a Write a JavaScript program to find the number of inversions of a given array of integers */
+
+
+function Inversions (arr) {
+    var ctr = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for let j = i + 1; j < arr.length; j++) {
+            if (arr[i] > arr[j]) 
+              ctr++;
+        }
+    }
+    return ctr;
+}
+
+console.log(number_of_InversionsNaive([4, 3, 7, 5, 8, 10]));   
+console.log(number_of_InversionsNaive([1, 2, 4, 3]));   
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

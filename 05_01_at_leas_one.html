@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>One element</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to check if there is at least one element which occurs in two given sorted arrays of integers */
+
+let atLeastOne = function(arr1, arr2) {
+	for(let i = 0; i < arr1.length; i++) {
+		for(let j = 0; j < arr2.length; j++) {
+			if (arr1[i] === arr2[j]) {
+				return true
+			} else {
+				continue
+			}
+		}
+		j = 0;
+	}
+	return false
+}
+
+console.log(atLeastOne(['a', 'b', 'c'], ['d', 'e', 'f']))
+console.log(atLeastOne([1, 2, 3], [4, 5, 3]))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
