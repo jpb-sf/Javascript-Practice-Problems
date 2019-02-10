@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Sum is single</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to find the number of times to replace a given number with the sum of its digits until it convert to a single digit number */
+
+let singleFromSum = function(number)
+ {	let newArr = [];
+ 	let str1 = number.toString();
+ 	let ctr = 1;
+ 	let tot = 0;
+ 	let newTotal;
+ 		
+	numberArray(str1);
+	function numberArray(str) 
+	{
+		for (let i = 0 ; i < str.length; i++)
+		{
+			newArr.push(Number(str[i]))
+		}
+		findSum(newArr)
+	}
+
+	function findSum(arr)    
+	{	
+		tot = 0;
+		for (let digit of arr) 
+		{
+			tot += digit
+			newTotal = tot
+		}
+	}
+ 
+	while (newTotal >= 10) 
+	{ 
+		ctr++;
+		newTotal = numberArray(newTotal)
+	} 
+	 
+	 return ctr
+	
+}
+
+console.log(singleFromSum(123))
+console.log(singleFromSum(1234))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
