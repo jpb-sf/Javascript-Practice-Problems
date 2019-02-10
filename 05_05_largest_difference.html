@@ -12,20 +12,27 @@
 /* Create a Write a JavaScript program to find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer*/
 
 
-let diffFinder = function(arr, val) {
+let diffFinder = function(arr, val) 
+{
     let newArr = [],
     highest = -Infinity;
 
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) ß
+    {
     	let n = i + 1;
-    	for (let j = n; j < arr.length; j++) {
+
+    	for (let j = n; j < arr.length; j++) 
+    	{
     		newArr.push(Math.abs(arr[i] - arr[j]));
     	}
     }
-	for (let y = 0; y < newArr.length; y++) {
+	for (let y = 0; y < newArr.length; y++) 
+	{
 
-		if (newArr[y] < val) {
-			if (newArr[y] > highest) {
+		if (newArr[y] < val) 
+		{
+			if (newArr[y] > highest) 
+			{
 				highest = newArr[y]
 			}
 		} 
