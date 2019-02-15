@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Replace hash</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to find all the possible options to replace the hash in a string (Consists of digits and one hash (#)) with a digit to produce an integer divisible by 3 */
+
+
+let hashReplacer2 = function(number) {
+	let num = number;
+	for (let i = 0; i <= 9; i++) {
+		num = num.replace("#", i.toString())
+		if (num % 3 == 0) {
+			return num
+		} else {
+			num = number;
+		}
+	}
+}
+
+console.log(hashReplacer2("2#4"))
+console.log(hashReplacer2("17#9"))
+console.log(hashReplacer2("332#"))
+console.log(hashReplacer2("14#7328"))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Get sum</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to calculate the sum n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integer*/
+
+ 
+let sumFinder = function(n) {
+ return n + Math.round(n / 2) + Math.round(n / 4) + Math.round(n / 8)
+}
+
+console.log(sumFinder(14))
+
+
+// Given answer (the rounding gives different results)	
+
+function int_sum(num) {
+    var s_sum = 0;
+    while (num > 0) {
+        s_sum += num;
+        num = Math.floor(num / 2);
+    }
+    return s_sum;
+}
+console.log(int_sum(14))
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

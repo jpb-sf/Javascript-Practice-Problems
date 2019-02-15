@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Prime array</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (didn't solve alone)
+/* Create a Write a JavaScript program to sort an array of all prime numbers between 1 and a given integer */
+
+function primes(num)
+{
+let result = [];
+	for (let i = 2; i <= num; i++) {
+
+		for (let j = 2; j <= i; j++) {
+			// This if statment is checking if i is divisable by anything.
+			// For instance, if i is 25, once j reaches 5, it breaks.
+			if ( i !== 2 && i % j === 0) { 
+				break; 
+			}
+			// 2nd if makes sure j increments all of the way up to 1 before pushing
+			// Otherwise, it might miss a divisable character. 
+			// J will always eventually be j === i -1 if it's not divisible (first if statment)
+			if ( i === 2 || j === i - 1 ) {
+			 result.push(i); 
+		}
+	}
+
+}
+return result;
+
+}
+console.log(primes(34)); 
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

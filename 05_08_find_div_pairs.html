@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Divider</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to find the number of sorted pairs formed by its elements of an given array of integers such that one element in the pair is divisible by the other one */
+
+
+let pairFinder = function(arr) {
+	let ctr = 0;
+	for (let i = 0; i < arr.length; i++) {
+		for (let j = i + 1; j < arr.length; j++) {
+			if ((arr[i] / arr[j]) % 1 === 0 || (arr[j] / arr[i]) % 1 === 0) {
+				ctr++
+			} else {
+				continue
+			}
+		}
+	}
+	return ctr;
+}
+console.log(pairFinder([2, 4, 10, 12]))
+console.log(pairFinder([100, 4, 10, 12, 3, 5]))
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

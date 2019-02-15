@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Find Trailing Zeros</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to find the number of trailing zeros in the decimal representation of the factorial of a given number. */
+
+ 
+let zeroFinder = function(number) {
+	let newNum = 1;
+	let ctr = 0;
+	for (let i = 1; i <= number; i++) {
+		if (i <= number) {
+			newNum *= i
+		}
+	}
+	newNum = newNum.toString();
+	let n = newNum.length - 1;
+	for (let i = n; i >= 0; i--) {
+		if (newNum[i] != 0) {
+			break
+		}
+		if(newNum[i] == 0) {
+			ctr++
+		}
+	} 
+	return ctr;	
+}
+
+
+console.log(zeroFinder(10))
+
+//Given answer 
+//Factorial's trailing number starts at 5, and the trailing zeros increase by one every 5 numbers
+
+//function trailing_zeros_factorial(n) {
+//    var result = 0;
+//    for (var i = 5; i <= n; i += 5) {
+//        var num = i;
+//        while (num % 5 === 0) {
+//            num /= 5;
+//            result++;
+//        }
+//    }
+//    return result;
+//}
+//
+//console.log(trailing_zeros_factorial(8))
+//console.log(trailing_zeros_factorial(9))
+//console.log(trailing_zeros_factorial(10))
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

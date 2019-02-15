@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Find Even</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to find the number of even values in sequence before the first occurrence of a given number */
+
+ 
+let numberEven = function(arr, upTo) {
+	let newArr = [];
+	let ctr = 0;
+	for ( let i = 1; i <= upTo; i++) {
+		if (i % 2 === 0) {
+			newArr.push(i);
+			ctr++
+		}
+	}
+	return ctr;
+}
+console.log(numberEven([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 10))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
