@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Longest even number</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to get the largest even number from an array of integers */
+
+let longestEven = function(arr) {
+	let highest = -Infinity;
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] > highest && arr[i] % 2 === 0) {
+			highest = arr[i];
+		}
+	}
+	return highest
+}
+
+console.log(longestEven([2, 34, 6, 88, 31, 9, 13])) // 88
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

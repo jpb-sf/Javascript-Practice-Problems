@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Point inside circle?</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to check whether a given array of integers represents either a strictly increasing or a strictly decreasing sequence */
+
+let arrayTest = function(arr) {
+ 	let ctr = 0,
+ 		ctr2 = 0,
+ 		result;
+ 	for (let i = 0; i < arr.length - 1; i++) {
+ 		for ( let j = i + 1; j < arr.length; j++) {
+ 			if (arr[i] < arr[j]) {
+ 				ctr++
+			}
+			if (arr[i] > arr[j]) {
+				ctr2++
+			}
+ 		}
+ 	}
+	if (ctr === arr.length || ctr2 === arr.length ) {
+ 		result = true;
+ 	} else {
+ 		result = false
+ 	}
+ 	return result
+}
+
+console.log(arrayTest([7, 8, 9]))
+console.log(arrayTest([9, 8, 7]))
+console.log(arrayTest([7, 9, 8]))
+console.log(arrayTest([9, 8, 8]))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

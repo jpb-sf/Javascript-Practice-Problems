@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Evens</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to find the number of even digits in a given integer */
+
+let evens = function(n) {
+	let num = n.toString(),
+		ctr = 0;
+
+	for (let i = 0; i < num.length; i++) {
+		if (i % 2 === 0) {
+			ctr++
+		}
+	}
+	return ctr
+}
+
+console.log(evens(42198))
+
+// A 2nd method (given answer)
+
+function countEvenDigits(n) {
+    return (n+'').match(/[02468]/g).length;
+  }
+  console.log(countEvenDigits(2329))
+
+
+
+// Another method
+
+function evenDigits(num) {
+let count = 0;
+
+while (num > 0) {
+
+if ((num % 10) % 2 === 0) { count++; }
+num = Math.floor(num / 10);
+}
+return count;
+}
+
+console.log(evenDigits(25)); // 6
+console.log(evenDigits(267947846)); // 6
+console.log(evenDigits(6)); // 1
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Numbers increasing</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to check if a given integer has an increasing digits sequence */
+
+
+let increase = function(number) {
+	let num = number.toString();
+	let flag = false;
+ 	for (let i = 0; i < num.length - 1; i++) {
+ 		if (num[i] < num[i + 1]) {
+ 			flag = true;
+ 			continue
+ 		} else {
+ 			flag = false;
+ 			break
+ 		}    
+	}
+	return flag
+
+}
+
+console.log(increase(123))
+console.log(increase(8149))
+console.log(increase(234587))
+console.log(increase(789))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

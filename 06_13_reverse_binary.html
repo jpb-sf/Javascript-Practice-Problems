@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Reverse 8 bit order</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to reverse the order of the bits in a given integer. */
+
+function binaryReversal(number){ 
+		let num = number,
+			binary = '',
+			tempArray = [],
+			result; 
+		while (num > 0) { 
+			binary = (num % 2) + binary; 
+			num = Math.floor( num / 2 );
+
+			if (num == 0) {
+				// Add extra zeros in front (8-bit)
+				for (let i = binary.length; i < 8; i++) {
+					binary = '0' + binary;
+				}
+				// Put binary into array to reverse
+				for (let i = 0; i < binary.length; i++) {
+				tempArray.push(binary[i]);
+				}
+			}
+		}
+		tempArray = tempArray.reverse().join('');
+		// Convert binary to base 2 digit
+		result = parseInt(tempArray, 2);
+		return result
+	}
+	
+	console.log(binaryReversal(14)); // 112
+	console.log(binaryReversal(3));  // 192
+	console.log(binaryReversal(115));  // 206
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

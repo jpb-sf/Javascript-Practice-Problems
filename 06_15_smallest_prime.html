@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Smallest prime</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to find the smallest prime number strictly greater than a given number */
+
+function smallestPrime(n) {
+	let prime = 0;
+	for (let i = n + 1; ; i++) {
+
+		if (i % 2 !== 0) {
+
+			for (let j = 2; j <= i; j++) {
+				//if not prime break
+				if (i % j === 0) {
+					break
+				}
+				if (n === 0 || n === 1) {
+					prime = 2;
+					break
+				}
+				if (j === i - 1)  {
+					prime = i;
+					break
+				}
+			}
+		} if (prime == i || prime == 2) {
+			break
+		} 
+	}
+	return prime
+}
+
+console.log(smallestPrime(0))
+console.log(smallestPrime(1))
+console.log(smallestPrime(2))
+console.log(smallestPrime(14))
+console.log(smallestPrime(561))
+console.log(smallestPrime(1082))
+console.log(smallestPrime(20))
+console.log(smallestPrime(1020320))
+console.log(smallestPrime(10820320))
+console.log(smallestPrime(108250320))
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Point inside circle?</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to find the longest string from a given array.*/
+
+let longestString = function(arr) {
+	let highest = 0,
+		temp;
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i].length > highest) {
+			highest = arr[i].length;
+			temp = arr[i];
+		}
+	}
+	return temp
+}
+
+console.log(longestString(["Luke", "Han", "Leia", "Chewie"])) // Chewie
+console.log(longestString(["Valentine's", "Easter", "Thanksgiving", "Christmas"])) // Thanksgiving
+console.log(longestString(["February", "March", "April"])) // February
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
