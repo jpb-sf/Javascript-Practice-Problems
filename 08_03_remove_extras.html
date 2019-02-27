@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Remove extras</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Write a JavaScript program to remove all characters from a given string that appear more than once */
+
+let removeExtra = function(str) {
+    let newStr = '',
+        flag = true;
+    for (let i = 0; i < str.length; i++) {
+        for (let j = i; j >= 0; j--) {
+            if(str[i] === str[j - 1]) {
+               flag = false;
+            }
+            if (flag == true && j == 0) {
+                newStr += str[i]
+            }
+        }
+        flag = true
+    }
+    return newStr
+}
+
+console.log(removeExtra('wwoorrdd  ggaammee')) // word game
+console.log(removeExtra('111222333')) // 123
+
+
+// Es6 version
+
+let removeExtra2 = function(str) {
+    let newStr = '';
+    for (let i = 0; i < str.length; i++) {
+        if (!newStr.includes(str[i])) {
+            newStr += str[i];
+        }
+    }
+    return newStr
+}
+
+console.log(removeExtra2('wwoorrdd  ggaammee')) // word game
+console.log(removeExtra2('111222333')) // 123
+        
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

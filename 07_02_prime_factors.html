@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Prime Factors</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Create a Write a JavaScript program to find all distinct prime factors of a given integer */
+
+let primeFactors = function(n) {
+	let newArr = [],
+		returnArr = [];
+	for (let i = 0; i <= n; i++) {
+		if (n % i === 0) {
+			newArr.push(i);
+		}
+	}
+  console.log(newArr)
+	for (let i = 0; i < newArr.length; i++) {
+		for (let j = 2; j <= newArr[i]; j++) {
+			if (newArr[i] % j === 0 && newArr[i] !== 2) {
+				break
+			}
+			if (j === newArr[i] - 1 || newArr[i] === 2) {
+				returnArr.push(newArr[i])
+			}
+		}
+	}
+	return returnArr
+}
+
+console.log(primeFactors(9))
+console.log(primeFactors(5))
+console.log(primeFactors(23))
+console.log(primeFactors(35))
+console.log(primeFactors(100))
+
+
+// given answer: 
+
+function prime_factors(num) {
+  function is_prime(num) {
+    
+    for (let i = 2; i <= Math.sqrt(num); i++)
+    {
+      if (num % i === 0) return false;
+    }
+    return true;
+  }
+
+  const result = [];
+  for (let i = 2; i <= num; i++)
+  { 
+    while (is_prime(i) && num % i === 0) 
+    {
+      	result.push(i);
+      	num /= i;
+    }
+  }
+  return result;
+}
+
+console.log(prime_factors(5));
+console.log(prime_factors(24));
+console.log(prime_factors(100));
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

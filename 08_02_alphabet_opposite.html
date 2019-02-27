@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Alphabet convert</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Write a JavaScript program to change the characters (lower case) in a string where a turns into z, b turns into y, c turns into x, ..., n turns into m, m turns into n, ..., z turns into a */
+
+let alphaConverter = function(char) {
+    let convert = "";
+        k = 122;
+
+    for (let i = 0; i < char.length; i++) {
+        for (let j = 97; j <= 122; j++) {
+            if (char[i]  === " ") {
+               convert += " ";
+               break
+            }
+            else if (j === char.charCodeAt(i)) {
+                convert += String.fromCharCode(k);
+                break
+            } 
+            k--
+        }
+        k = 122;
+    }
+    return convert
+}
+
+console.log(alphaConverter('n')) // m
+console.log(alphaConverter('xyz')) // cba
+console.log(alphaConverter('enctrypted text')) // vmxgibkgvw gvcg
+
+
+
+// another coder's anwer
+
+   function encrypt(str) {
+     let dict = {' ': ' '};
+      for (let i = 0; i < 26; i++) {
+        dict[String.fromCharCode(97 + i)] = String.fromCharCode(97 + 25 - i);
+      }
+      return str.split('').map(x => dict[x]).join('');
+  }
+
+  console.log(encrypt('hello how'))
+        
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
