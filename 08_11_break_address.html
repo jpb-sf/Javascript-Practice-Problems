@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Break URL address</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Write a JavaScript program to break an address of an url and put it's part into an array.  */
+
+// From string
+
+let addressDivide = function(url) {
+	let addArry = [];
+	let finder = url.match(/(\w+):\/\/(\w+\.\w+\.\w+)\/(\w+[-]?\w+)/);
+	for (let i = 1; i < finder.length; i++) {
+		addArry.push(finder[i]);
+	}
+	return addArry
+}
+
+let address = "https://www.w3resource.com/javascript-exercises";
+console.log(addressDivide(address))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

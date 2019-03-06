@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Two arrays same elem</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Write a JavaScript program to sort the strings of a given array of strings in the order of increasing lengths */
+
+let stringSorter = function(arr) {
+	arr.sort(function(a,b) {
+		return a.length - b.length
+	})
+	return arr
+}
+
+console.log(stringSorter(["Hello", "I", "am", "from", "Earth"])) // [ "I", "am", "from", "Hello", "Earth" ]
+
+// (given answer)
+//function sort_by_string_length(arra) {
+//	for (var i = 0; i < arra.length; i++) {
+//		for (var j = i + 1; j < arra.length; j++) {
+//			if (arra[i].length > arra[j].length) {
+//				var m = arra[i];
+//				arra[i] = arra[j];
+//				arra[j] = m;
+//			}
+//		}
+//	}
+//	return arra;
+//}
+//var arra = ["xyz","acd","aa","bb","zzz","", "a","b"];
+//console.log("Original array: "+ arra+"\n");
+//console.log(sort_by_string_length(["xyz","acd","aa","bb","zzz","", "a","b"]));
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Sum of digits</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Write a JavaScript program to compute the sum of all digits that occur in a given string.  */
+
+// My answer
+
+let sumOfDigits = function(str) {
+	let total = 0;
+	for (let i = 0; i < str.length; i++) {
+
+		if (str.charCodeAt(i) >= 48 && str.charCodeAt(i) <= 57) {
+			total += +str[i];
+		}
+	}
+	return total
+
+}
+console.log(sumOfDigits("5 pizzas? Add 5 more to the order"))
+
+// Other answers
+// 1:
+
+let sumOfDigits2 = function(str) {
+	let total = 0;
+	for (n of str) {
+		if (!isNaN(n)) {
+			total += +n;
+		}
+	}
+	return total
+}
+console.log(sumOfDigits2("5 pizzas? Add 5 more to the order"))
+
+// 2:
+ 
+function sumOfDigits3(str) {
+      return str.match(/(\d)/g).map(Number).reduce((x, y) => x + y, 0);
+    }
+
+console.log(sumOfDigits3("5 pizzas? Add 5 more to the order"))
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

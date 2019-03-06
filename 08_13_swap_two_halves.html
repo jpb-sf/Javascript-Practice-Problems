@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Swap halves</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Write a JavaScript program to swap two halves of a given array of integers of even length  */
+let arraySwapper = function(arr) {
+	let newArray = [];
+		len = arr.length;
+	for (i = len / 2; i < len; len--) {
+		newArray.push(arr[i]);
+		arr.splice(i, 1)
+	}
+	
+	return newArray.concat(arr)
+
+}
+console.log(arraySwapper(["a", "b", "c", "d", "e", "f", "g", "h"]))
+//[ "e", "f", "g", "h", "a", "b", "c", "d" ]
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

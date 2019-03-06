@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Digits same?</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Write a JavaScript program to check if all the digits in a given number are the same or not */
+
+let digitsSame = function(num) {
+	let result = true;
+		num = "" + num;
+		
+	for (let i = 1; i < num.length; i++) {
+		if (num[i] != num[i - 1]) {
+			result = false;
+		}
+	}
+	return result
+}
+
+console.log(digitsSame(242))
+console.log(digitsSame(222))
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

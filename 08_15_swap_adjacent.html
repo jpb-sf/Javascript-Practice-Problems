@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Swap adjacent</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Write a JavaScript program to swap pairs of adjacent digits of a given integer of even length */
+
+let swapAdjac = function(n) {
+	let	num = "" + n,
+	 	newNum = "";
+	
+	if (num.length % 2) {
+		newNum += "Not an even length number";
+	} else {
+		for (let i = 0; i < num.length; i++) {
+			newNum += num[i + 1] + num[i];
+			i++
+		}
+	}
+	return newNum
+}
+console.log(swapAdjac(472921)) // 749212
+console.log(swapAdjac(123)) // Not an even length number
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

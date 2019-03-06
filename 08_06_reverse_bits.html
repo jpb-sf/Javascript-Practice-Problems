@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Reverse bits</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Write a JavaScript program to reverse the bits of a given 16 bits unsigned short integer */
+
+let reverseBits = function(arg) {
+	let num = "" + arg,
+		binary = "",
+		binaryArr = [],
+		result;
+
+	while (num > 0) {
+		binary = (num % "2") + binary;
+		num = Math.floor(num / 2); 
+	}
+	if (num === 0) {
+		for (let i = binary.length; i < 16; i++) {
+			binary = "0" + binary;
+		}
+		// Set binary to array in reverse order
+		for (let i = binary.length - 1; i > 0; i--) {
+			binaryArr.push(binary[i])
+		}
+	}
+	result = binaryArr.join('')
+	console.log(result)
+	return parseInt(result, 2)
+	
+}
+
+console.log(reverseBits(14)); // 3072
+console.log(0 % 2)
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

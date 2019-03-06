@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Reverse bits</title>
+</head>
+<html>
+<body>
+
+</body>
+<script>
+// Vanilla Javascript exercise: (solved alone)
+/* Write a JavaScript program to find the position of a rightmost round number in an array of integers. Returns 0 if there are no round number */
+
+let rightRound = function(arr) {
+	let result = 0;
+	for (let i = arr.length - 1; i >= 0; i--) {
+		if (arr[i] % 10 === 0) {
+			return arr[i];
+		}
+	}
+	return result;
+}
+console.log(rightRound([23, 55, 90, 11, 70, 22]))
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
