@@ -7,34 +7,56 @@
 <body>
 <p>Get the count of the letter p in the following sentence:</p>
 <p id="demo">Happy puppy</p>
-
 <button onclick="myFunction()">Get Count</button>
+<button onclick="myFunction2()">Get Count</button>
+<button onclick="myFunction3()">Get Count</button>
 <p id="demo2"></p>
 <p id="demo3"></p>
-
+<p id="demo4"></p>
 
 <script>
-//vanilla js practice
+// Vanilla Javascript exercise: 
+/* Write a JavaScript program to get the count of the letter p in the following phrase */
+// Updated March 2019 (had really poor function here)
 var getStr = document.querySelector('#demo').firstChild.nodeValue;
 
 let myFunction = function() {
+   let ctr = 0;
+   for (let i = 0; i < getStr.length; i++) {
+      if (getStr[i] === "p" || getStr[i] === "P") {
+         ctr++
+      }
+   }
+   document.querySelector('#demo2').innerHTML = ctr;
+};	
+
+// 2nd version (update)
+let myFunction2 = function() {
+   const match = getStr.match(/p/g).length;
+   document.querySelector('#demo3').innerHTML = match;
+}
+
+
+// 3rd version (Interesting object maker keeping count of all characters)
+let myFunction3 = function() {
 	const object = {};
-	let i;
-	for (i = 0; i < getStr.length; i++) {
+	for (let i = 0; i < getStr.length; i++) {
       let char = getStr[i];
-		// whitespace can throw error when incrementing to object, so... 
-      // if string value is false, set it (whitespace) to 0
-		if (!object[char]) {
+		
+		if (!object[char]) { // [char] is a key, not index. This is not an array
+         // if this object key doesn't exist yet, set it's property value to zero
 			object[char] = 0;
 		}
-		// incrementing strings into an object. 
-      // The string values become the keys. 
+      // increment object key value by one 1
 		object[char]++;
 	}
 	console.log(object);
-   document.querySelector('#demo2').innerHTML = object.p;
-	document.querySelector('#demo3').innerHTML = "all letter counts logged in console"
+	document.querySelector('#demo4').innerHTML = object.p;
 } 	
+
+//var y = Boolean(" ");
+//console.log(y) // true
+
 
 </script>
 

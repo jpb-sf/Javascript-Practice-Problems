@@ -8,20 +8,23 @@
 
 <input type="text" class="input">
 <button onclick="test()">Try</button>
-
+<div class="answer"></div>
 </body>
 <script>
 // Vanilla Javascript exercise:
 /* Take a given string and swap the first character with the last character */
 function test (){
-const input = document.querySelector('.input').value;
-if (input.length < 2) {
-	return console.log('please enter more than one character')
-}
-const lastChar = input.charAt(input.length - 1);
-const firstChar = input[0];
-let newString = lastChar + input.substring(1, input.length -1) + firstChar;
-console.log(newString)
+	const input = document.querySelector('.input').value;
+	const answer = document.querySelector('.answer');
+	if (input.length < 2) {
+		return console.log('please enter more than one character')
+	}
+	const lastChar = input[input.length - 1];
+	const firstChar = input[0];
+	const element = document.createElement('p');
+	let textNode = document.createTextNode(lastChar + input.substring(1, input.length -1) + firstChar);
+	element.appendChild(textNode);
+	answer.appendChild(element);
 }
 </script>
 </html>

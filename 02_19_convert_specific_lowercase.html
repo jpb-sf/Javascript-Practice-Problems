@@ -6,21 +6,25 @@
 <html>
 <body>
 <p>Create new string with first 3 characters are in lower case. If the string length is less than 3 convert all the characters to upper case. </p>
-<p class="test">THIS is a test.</p>
+<input class="test">
+</input>
+<br>
 
-<button onclick="test()">Return new string</button>
+<button onclick="test()">Convert</button>
 
 </body>
 <script>
 // Vanilla Javascript exercise: (solved alone)
 /* Create new string with first 3 characters are in lower case. If the string length is less than 3 convert all the characters in upper casee */
+
 function test (){
-	let str = document.querySelector('.test').innerHTML;
-	let first3 = str.substr(0,3).toLowerCase();
-	let remain = str.substr(3);
-	
-	console.log(first3 + remain)
+	let str = document.querySelector('.test').value;
+	if (str.length < 3) {
+		console.log(str.toUpperCase());
+	} else {
+		console.log(str)
 	}
+}
 
 </script>
 </html>

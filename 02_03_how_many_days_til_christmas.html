@@ -15,18 +15,20 @@
 // Vanilla Javascript exercise:
 // Calculate how many days til Christmas
 let now = new Date();
-
+// Set variable to Christmas of this year
 let cMas = new Date(now.getFullYear(),11, 25);
 
+// If christmas has passed, set year to next year
 if (now.getMonth()==11 && now.getDate() > 25)
 {
     cMas.setFullYear(now.getFullYear() + 1)
 }
-
+// Calculate one day's milliseconds
 let oneDay = 1000 * 60 * 60 * 24;
 console.log(oneDay)
 
-document.querySelector('.demo').innerHTML = 
+document.querySelector('.demo').innerHTML =
+// .ceil method compensates for any time over to be a another day 
 Math.ceil((cMas.getTime() - now.getTime()) / oneDay) +
 " days left until Christmas!"
 

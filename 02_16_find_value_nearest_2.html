@@ -16,23 +16,22 @@
 // Vanilla Javascript exercise: (solved a different way, this is less code)
 /* Find the value which is nearest to 100 from two different given integer values */
 function test (){
-let input = document.querySelector('.input').value;
-let input2 = document.querySelector('.input2').value;
+	let input = document.querySelector('.input').value,
+		input2 = document.querySelector('.input2').value;
 
-let diff1 = Math.abs(input - 100);
-let diff2 = Math.abs(input2 - 100);
+	let diff1 = Math.abs(100 - input);
+	let diff2 = Math.abs(100 - input2);
 
 	if(diff1 != diff2) {
 
 		if (diff1 < diff2) {
 			console.log(input + ' is closer to 100')
-			} else {
-				console.log(input2 + ' is closer to 100')
-			}
+		} else {
+			console.log(input2 + ' is closer to 100')
 		}
-		if (diff1 === diff2) {
-			console.log(input + ' and ' + input2 + ' are the same distance from 100.')
-		}
+	} else {
+		console.log(input + ' and ' + input2 + ' are the same distance from 100.')
+	}
 }
 
 </script>

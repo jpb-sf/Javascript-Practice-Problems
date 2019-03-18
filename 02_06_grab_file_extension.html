@@ -18,6 +18,7 @@
 // Create program that will grab all user given file extensions
 function test (){
 let input = document.querySelector('.input').value;
+//match will return an array
 let fileExt = input.match(/[.]\w+/g);
 
 console.log(fileExt)

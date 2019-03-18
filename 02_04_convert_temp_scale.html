@@ -38,7 +38,7 @@
 
 <script>
 // Vanilla Javascript exercise:
-// Write a script that can converto fahrenheith to and from Celsius
+// Write a script that can conver to and from fahrenheit and Celsius
 
 let btn1 = document.querySelector('.btn1');
 btn1.addEventListener('click', function() {
@@ -50,23 +50,23 @@ btn2.addEventListener('click', function() {
 	let inputV = document.querySelector('.input').value;
 	cToF(inputV); })
 
+// Converts Celsius to Fahrenheit
 function cToF(v) {
-let temp = v;
-let convert = (1.8 * v) + 32;
-let round = convert.toFixed(1);
-document.querySelector('.demo').innerHTML = v + ' C&#176 is' +
-' equal to ' + round + ' F&#176';
+	let convert = (1.8 * v) + 32;
+	// Set result to rounded digit behind decimal
+	let round = convert.toFixed(1);
+	document.querySelector('.demo').innerHTML = v + ' C&#176 is' +
+	' equal to ' + round + ' F&#176';
 }
 
+// Converts Fahrentheit to Celsius
 function fToC(v) {
-let temp = v;
-let convert = (v - 32) / 1.8;
-let round = convert.toFixed(1);
-document.querySelector('.demo').innerHTML = v + ' F&#176 is' +
-' equal to ' + round + ' C&#176';
+	let convert = (v - 32) / 1.8;
+	// Set result to rounded digit behind decimal
+	let round = convert.toFixed(1);
+	document.querySelector('.demo').innerHTML = v + ' F&#176 is' +
+	' equal to ' + round + ' C&#176';
 }
-
-
 
 </script>
 

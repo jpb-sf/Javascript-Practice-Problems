@@ -8,9 +8,9 @@
 <h2>Find years July 4th falls on a Thursday</h2>
 <h4>Insert year range below.</h4>
 <span>Between:</span> 
-<input type="number" maxlength="4" id="year1" pattern="[0-9]" placeholder="enter earlier year">
+<input type="number" id="year1" pattern="[0-9]" placeholder="enter earlier year">
 <span>And: </span>
-<input type="number" maxlength="4" id="year2" pattern="[0-9]" placeholder="enter later year">
+<input type="number" id="year2" pattern="[0-9]" placeholder="enter later year">
 <br>
 <br>
 <button type="click" class="btn">Check</button>
@@ -21,67 +21,50 @@
 
 // Vanilla Javascript problem: (solved with some help)
 /* Find all the years a particular date falls on particular day
-between a span of variable years. 
+between a span of variable years. */
 
-This program finds all the years July 4th is on a Thursday,
-and reveals answer inside the body of the document */
+// This program finds all the years July 4th is on a Thursday
 
-// Steps taken:
-// grabs values of two inputs (years) and parent selector
-/* while statement checks if parent element has any children, 
-and if so deletes them this resets the HTML if the function 
-has already been run */
-// for loop until 1st input is not less than 2nd input
-// increments years
-// gets Date object, sets to July 4th with year as a variable
-// gets day value of current Date object
-/* if statment: if the day is thursday(4) and year is less than 2019,
-create new HTML element and text node with answer of correct years
-in statement in past tense */
-/* if statment: if the day is thursday(4) and year is more than 2019,
-create new HTML element and text node with answer of correct years
-in future tense */
+
 
 let btn = document.querySelector('.btn');
 let click = btn.addEventListener('click', dayTest);
 
 function dayTest() {
+	let getYears, d, day, elem, text;
+	// Get the input values
 	let v1 = document.getElementById('year1').value;
 	let v2 = document.getElementById('year2').value;
 	let parent = document.querySelector('.demo');
+	// If function has been previously ran, remove answers
 	while (parent.firstChild) {
 		parent.removeChild(parent.firstChild);
 	}
-	let year;
-	let getYears;
-	var d;
-	var day;
-	for(year = v1; year < v2; year++) {
-
+	// Loop through as long input 1 year is less than input 2 year
+	for(let year = v1; year < v2; year++) {
+		// Set new date to year of input one; change month to 6, day to 4
 		d = new Date(year, 6, 4);
+		// Get day of the date of variable d
 		day = d.getDay();
-
+		// If the day is thursday and input 1 year is less than 2019
+		// Create new element
+		elem = document.createElement('p');
 		if(day === 4 && year < 2019) {
-			let elem = document.createElement('p');
-			let text = document.createTextNode('July 4th fell ' + 
+			// Give it a text node of past tense
+			text = document.createTextNode('July 4th fell ' + 
 			'on a Thursday in ' + year + '.');
 			elem.appendChild(text);
-			parent.appendChild(elem);
-		}
+		} 
+		// Else if day is Thursday, but year is in future
 		else if (day === 4) {
-			let elem = document.createElement('p');
-			let text = document.createTextNode('July 4th falls ' + 
+			text = document.createTextNode('July 4th falls ' + 
 			'on a Thursday in ' + year + '.' );
 			elem.appendChild(text);
-			parent.appendChild(elem);
-		}
+		};
+			// append new p element to parent element 
+			parent.appendChild(elem)
 	}
 }
 </script>
-
-
-
-
-
 
 </html>

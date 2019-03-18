@@ -11,9 +11,9 @@
 // Vanilla Javascript exercise: (solved alone)
 /* Check from three given integers that if a number is greater than or equal to 20 and less than one of the others. */
 function numberTest (a, b, c){
-return(a >= 20 && (a < b || a < c)) ||
-(b >= 20 && (b < a || b < c )) ||
-(c >= 20 && (c < a || c < b))
+	return(a >= 20 && (a < b || a < c)) ||
+	(b >= 20 && (b < a || b < c )) ||
+	(c >= 20 && (c < a || c < b))
 }
 
 console.log(numberTest(34, 22, 10))
